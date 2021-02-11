@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building...."
+                sh './ci/build.sh'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Unit test') {
             steps {
-                echo "..... Unit tests passed"
+                sh './ci/test.sh'
             }
         }
     }
