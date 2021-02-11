@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
+                checkout scm
                 echo "Clone source code"
             }
         }
